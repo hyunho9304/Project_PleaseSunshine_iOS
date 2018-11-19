@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Please_Sunshine_iOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Please_Sunshine_iOS
+    pod 'Alamofire' # 사용하는 라이브러리들
+    pod 'SwiftyJSON'
+    pod 'Kingfisher'
+    pod 'ObjectMapper'
+
+end
