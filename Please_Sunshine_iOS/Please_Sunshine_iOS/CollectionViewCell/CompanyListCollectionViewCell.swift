@@ -11,4 +11,5 @@ import UIKit
 class CompanyListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var companyInfoImageView: UIImageView!
+    
 }

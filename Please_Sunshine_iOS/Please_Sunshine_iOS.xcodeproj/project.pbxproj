@@ -16,6 +16,8 @@
 		BEAE22A421A29724002F1062 /* CompanyListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A321A29724002F1062 /* CompanyListCollectionViewCell.swift */; };
 		BEAE22A721A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A621A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift */; };
 		BEAE22A921A2BD5D002F1062 /* CompanyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A821A2BD5D002F1062 /* CompanyInfoTableViewCell.swift */; };
+		BEAE22AE21A2D928002F1062 /* NanumSquareRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEAE22AC21A2D928002F1062 /* NanumSquareRegular.ttf */; };
+		BEAE22AF21A2D928002F1062 /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEAE22AD21A2D928002F1062 /* NanumSquareBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		BEAE22A321A29724002F1062 /* CompanyListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEAE22A621A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComapnyDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 		BEAE22A821A2BD5D002F1062 /* CompanyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoTableViewCell.swift; sourceTree = "<group>"; };
+		BEAE22AC21A2D928002F1062 /* NanumSquareRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRegular.ttf; sourceTree = "<group>"; };
+		BEAE22AD21A2D928002F1062 /* NanumSquareBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareBold.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		BE69C08021A2912D009E9E9F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				BEAE22AB21A2D8FF002F1062 /* Fonts */,
 				BE69C08321A29160009E9E9F /* Service */,
 				BE69C08221A29150009E9E9F /* Model */,
 				BE69C08121A29143009E9E9F /* Function */,
@@ -161,6 +166,15 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		BEAE22AB21A2D8FF002F1062 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BEAE22AD21A2D928002F1062 /* NanumSquareBold.ttf */,
+				BEAE22AC21A2D928002F1062 /* NanumSquareRegular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F03B7FE365DFCBE52C4E3EBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAE22AF21A2D928002F1062 /* NanumSquareBold.ttf in Resources */,
+				BEAE22AE21A2D928002F1062 /* NanumSquareRegular.ttf in Resources */,
 				BE74CB8521A28F7F00411E7B /* LaunchScreen.storyboard in Resources */,
 				BE74CB8221A28F7F00411E7B /* Assets.xcassets in Resources */,
 				BE74CB8021A28F7E00411E7B /* Main.storyboard in Resources */,

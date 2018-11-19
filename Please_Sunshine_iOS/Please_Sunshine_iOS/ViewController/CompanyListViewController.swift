@@ -10,6 +10,13 @@ import UIKit
 
 class CompanyListViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , UITableViewDelegate , UITableViewDataSource {
 
+    
+    let userdefault = UserDefaults.standard
+    
+    @IBOutlet weak var alarmBtn: UIButton!
+    @IBOutlet weak var alarmLabel: UILabel!
+    @IBOutlet weak var bubbleUIView: UIView!
+    
     @IBOutlet weak var companyListCollectionView: UICollectionView!
 
     @IBOutlet weak var companyInfoTableView: UITableView!
@@ -20,8 +27,25 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        set()
         setDelegate()
+    }
+    
+    func set() {
+        
+        let flag = userdefault.integer(forKey: "alarm" )
+        
+        if( flag == 1 ) {
+            self.alarmBtn.setImage( #imageLiteral(resourceName: "alarmOff"), for: .normal)
+        } else {
+            self.alarmBtn.setImage( #imageLiteral(resourceName: "alarmOn"), for: .normal)
+        }
+        
+        
+//        if nickNameTextField.text != "" {
+//            userdefault.set(gsno(nickNameTextField.text), forKey: "nickName")
+        
     }
     
     func setDelegate() {
@@ -56,8 +80,6 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CompanyListCollectionViewCell", for: indexPath ) as! CompanyListCollectionViewCell
         
-        cell.companyInfoImageView.image = #imageLiteral(resourceName: "webSiteButton")
-        
         return cell
     }
     
@@ -69,7 +91,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     //  cell 크기 비율
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 162 * self.view.frame.width/375 , height: 182 * self.view.frame.height/667 )
+        return CGSize(width: 160 * self.view.frame.width/375 , height: 204 * self.view.frame.height/667 )
     }
     
     //  cell 간 가로 간격 ( horizental 이라서 가로를 사용해야 한다 )
@@ -122,7 +144,13 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ComapnyDetailInfoTableViewCell") as! ComapnyDetailInfoTableViewCell
             
-            cell.panelNameLabel.text = "hahaha"
+    
+            
+            cell.panelNameLabel.text = "서버데이터"
+            cell.installPriceLabel.text = "서버데이터"
+            cell.supportPriceLabel.text = "서버데이터"
+            cell.actualPriceLabel.text = "서버데이터"
+            cell.panelSizeLabel.text = "서버데이터"
             
             return cell
         }
