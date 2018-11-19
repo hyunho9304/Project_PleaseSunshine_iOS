@@ -13,6 +13,8 @@
 		BE74CB8021A28F7E00411E7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE74CB7E21A28F7E00411E7B /* Main.storyboard */; };
 		BE74CB8221A28F7F00411E7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE74CB8121A28F7F00411E7B /* Assets.xcassets */; };
 		BE74CB8521A28F7F00411E7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE74CB8321A28F7F00411E7B /* LaunchScreen.storyboard */; };
+		BEAE22A421A29724002F1062 /* CompanyListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A321A29724002F1062 /* CompanyListCollectionViewCell.swift */; };
+		BEAE22A721A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A621A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BE74CB8121A28F7F00411E7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE74CB8421A28F7F00411E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE74CB8621A28F7F00411E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEAE22A321A29724002F1062 /* CompanyListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEAE22A621A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComapnyDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		BE69C08421A29172009E9E9F /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				BEAE22A321A29724002F1062 /* CompanyListCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -138,10 +143,19 @@
 				BE69C08621A291A1009E9E9F /* StoryBoard */,
 				BE69C08521A29181009E9E9F /* ViewController */,
 				BE69C08421A29172009E9E9F /* CollectionViewCell */,
+				BEAE22A521A2B37F002F1062 /* TableViewCell */,
 				BE69C08021A2912D009E9E9F /* Util */,
 				BE69C07F21A29123009E9E9F /* Asset */,
 			);
 			path = Please_Sunshine_iOS;
+			sourceTree = "<group>";
+		};
+		BEAE22A521A2B37F002F1062 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BEAE22A621A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		F03B7FE365DFCBE52C4E3EBE /* Frameworks */ = {
@@ -270,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAE22A721A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift in Sources */,
 				BE69C08821A29246009E9E9F /* CompanyListViewController.swift in Sources */,
+				BEAE22A421A29724002F1062 /* CompanyListCollectionViewCell.swift in Sources */,
 				BE74CB7B21A28F7E00411E7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
