@@ -30,6 +30,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         
         set()
         setDelegate()
+        setTarget()
     }
     
     func set() {
@@ -38,14 +39,13 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         
         if( flag == 1 ) {
             self.alarmBtn.setImage( #imageLiteral(resourceName: "alarmOff"), for: .normal)
+            alarmLabel.text = "다시 보려면 버튼을 눌러주세요"
+            bubbleUIView.isHidden = true
         } else {
             self.alarmBtn.setImage( #imageLiteral(resourceName: "alarmOn"), for: .normal)
+            alarmLabel.text = "300W 초과 발전기는 부산시에서 보조금이 지원되지 않습니다."
+            bubbleUIView.isHidden = false
         }
-        
-        
-//        if nickNameTextField.text != "" {
-//            userdefault.set(gsno(nickNameTextField.text), forKey: "nickName")
-        
     }
     
     func setDelegate() {
@@ -62,6 +62,32 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         companyDetailInfoTableView.rowHeight = 123
 
         
+    }
+    
+    func setTarget() {
+        
+        //  알림 끄기 버튼 클릭
+        alarmBtn.addTarget(self, action: #selector(self.pressedAlarmBtn(_:)), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc func pressedAlarmBtn( _ sender: UIButton ) {
+        
+        if( alarmBtn.image(for: .normal) == #imageLiteral(resourceName: "alarmOn") ) {
+            
+            userdefault.set( 1 , forKey: "alarm")
+            
+            alarmBtn.setImage( #imageLiteral(resourceName: "alarmOff") , for: .normal )
+            alarmLabel.text = "다시 보려면 버튼을 눌러주세요"
+            bubbleUIView.isHidden = true
+            
+        } else {
+            
+            userdefault.set( 0 , forKey: "alarm")
+            
+            alarmBtn.setImage( #imageLiteral(resourceName: "alarmOn") , for: .normal )
+            alarmLabel.text = "300W 초과 발전기는 부산시에서 보조금이 지원되지 않습니다."
+            bubbleUIView.isHidden = false
+        }
     }
     
     
