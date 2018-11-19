@@ -18,6 +18,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     @IBOutlet weak var bubbleUIView: UIView!
     
     @IBOutlet weak var companyListCollectionView: UICollectionView!
+    var companySelectedIndex:IndexPath?                     //  선택고려
 
     @IBOutlet weak var companyInfoTableView: UITableView!
     @IBOutlet weak var showCompanyNameLabel: UILabel!
@@ -106,12 +107,35 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CompanyListCollectionViewCell", for: indexPath ) as! CompanyListCollectionViewCell
         
+        // 서버데이터 기본 설정
+        
+        if( indexPath == companySelectedIndex ) {
+            
+            cell.companyInfoImageView.image = #imageLiteral(resourceName: "listCirlce1")
+            cell.companyInfoLabel1.alpha = 1
+            cell.companyInfoLabel2.alpha = 1
+            cell.companyInfoLabel3.alpha = 1
+            cell.companyNameLabel.alpha = 1
+            
+        } else {
+            
+            cell.companyInfoImageView.image = #imageLiteral(resourceName: "listCirlce")
+            cell.companyInfoLabel1.alpha = 0.5
+            cell.companyInfoLabel2.alpha = 0.5
+            cell.companyInfoLabel3.alpha = 0.5
+            cell.companyNameLabel.alpha = 0.5
+        }
+        
+        
+        
         return cell
     }
     
     //  cell 선택 했을 때
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        companySelectedIndex = indexPath
+        collectionView.reloadData()
     }
     
     //  cell 크기 비율

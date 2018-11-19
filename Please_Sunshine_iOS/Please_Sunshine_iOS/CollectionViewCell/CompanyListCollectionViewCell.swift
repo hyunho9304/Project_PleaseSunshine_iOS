@@ -12,4 +12,8 @@ class CompanyListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var companyInfoImageView: UIImageView!
     
+    @IBOutlet weak var companyInfoLabel1: UILabel!
+    @IBOutlet weak var companyInfoLabel2: UILabel!
+    @IBOutlet weak var companyInfoLabel3: UILabel!
+    @IBOutlet weak var companyNameLabel: UILabel!
 }

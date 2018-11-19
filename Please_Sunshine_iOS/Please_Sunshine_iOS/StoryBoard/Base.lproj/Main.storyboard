@@ -125,6 +125,10 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="companyInfoImageView" destination="tsU-H5-YKN" id="MhS-H0-6Zj"/>
+                                            <outlet property="companyInfoLabel1" destination="8wK-dg-j8q" id="yLl-Mg-5uj"/>
+                                            <outlet property="companyInfoLabel2" destination="SJG-vm-emJ" id="R6X-uB-Pax"/>
+                                            <outlet property="companyInfoLabel3" destination="EgL-2V-pDi" id="IDg-4O-XtT"/>
+                                            <outlet property="companyNameLabel" destination="3Vg-Y4-zPl" id="Gsb-GV-egy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
