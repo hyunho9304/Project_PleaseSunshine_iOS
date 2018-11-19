@@ -15,6 +15,7 @@
 		BE74CB8521A28F7F00411E7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE74CB8321A28F7F00411E7B /* LaunchScreen.storyboard */; };
 		BEAE22A421A29724002F1062 /* CompanyListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A321A29724002F1062 /* CompanyListCollectionViewCell.swift */; };
 		BEAE22A721A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A621A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift */; };
+		BEAE22A921A2BD5D002F1062 /* CompanyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A821A2BD5D002F1062 /* CompanyInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BE74CB8621A28F7F00411E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEAE22A321A29724002F1062 /* CompanyListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEAE22A621A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComapnyDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
+		BEAE22A821A2BD5D002F1062 /* CompanyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				BEAE22A621A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift */,
+				BEAE22A821A2BD5D002F1062 /* CompanyInfoTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				BEAE22A721A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift in Sources */,
 				BE69C08821A29246009E9E9F /* CompanyListViewController.swift in Sources */,
+				BEAE22A921A2BD5D002F1062 /* CompanyInfoTableViewCell.swift in Sources */,
 				BEAE22A421A29724002F1062 /* CompanyListCollectionViewCell.swift in Sources */,
 				BE74CB7B21A28F7E00411E7B /* AppDelegate.swift in Sources */,
 			);

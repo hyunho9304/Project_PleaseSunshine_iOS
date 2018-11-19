@@ -11,6 +11,10 @@ import UIKit
 class CompanyListViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , UITableViewDelegate , UITableViewDataSource {
 
     @IBOutlet weak var companyListCollectionView: UICollectionView!
+
+    @IBOutlet weak var companyInfoTableView: UITableView!
+    @IBOutlet weak var showCompanyNameLabel: UILabel!
+    
     @IBOutlet weak var companyDetailInfoTableView: UITableView!
     
     
@@ -25,10 +29,14 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         companyListCollectionView.delegate = self
         companyListCollectionView.dataSource = self
         
+        companyInfoTableView.delegate = self
+        companyInfoTableView.dataSource = self
+        companyInfoTableView.rowHeight = 30
+
         companyDetailInfoTableView.delegate = self
         companyDetailInfoTableView.dataSource = self
         companyDetailInfoTableView.rowHeight = 123
-        companyDetailInfoTableView.separatorInset = .zero
+
         
     }
     
@@ -82,17 +90,42 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     //  cell 별로 나타낼 개수( delegate & datasource )
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        if( tableView == companyInfoTableView ) {
+            return 4
+        } else {
+            return 3
+        }
     }
     
     //  cell 안의 내용( delegate & datasource )
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ComapnyDetailInfoTableViewCell") as! ComapnyDetailInfoTableViewCell
-        
-        cell.panelNameLabel.text = "hahaha"
-        
-        return cell
+        if( tableView == companyInfoTableView ) {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyInfoTableViewCell") as! CompanyInfoTableViewCell
+            
+            if( indexPath.row == 0 ) {
+                cell.typeLabel.text = "모듈 제조사"
+            } else if( indexPath.row == 1 ) {
+                cell.typeLabel.text = "인버터 제조사"
+            } else if( indexPath.row == 2 ) {
+                cell.typeLabel.text = "전화번호"
+            } else {
+                cell.typeLabel.text = "홈페이지 주소"
+            }
+            
+            cell.typeInfoLabel.text = "서버데이터"
+            
+            return cell
+            
+        } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ComapnyDetailInfoTableViewCell") as! ComapnyDetailInfoTableViewCell
+            
+            cell.panelNameLabel.text = "hahaha"
+            
+            return cell
+        }
     }
     
     //  cell 클릭했을시 다음 view 로 넘어가게 하는 코드 like push
