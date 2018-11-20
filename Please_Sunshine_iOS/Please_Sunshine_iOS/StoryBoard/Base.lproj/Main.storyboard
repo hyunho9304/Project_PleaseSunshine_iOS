@@ -172,7 +172,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="7Ex-Md-NAt" secondAttribute="height" multiplier="229:21" id="Apd-cq-AkJ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -222,14 +222,14 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gI-Md-bd9">
-                                                                <rect key="frame" x="21" y="8" width="29" height="14"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <rect key="frame" x="21" y="9" width="27" height="12.5"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                                 <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-i0-Wj3">
-                                                                <rect key="frame" x="240" y="8" width="29" height="14"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <rect key="frame" x="240" y="9" width="27" height="12.5"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -278,8 +278,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="230" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQM-oz-NCr">
-                                                    <rect key="frame" x="37" y="18.5" width="23" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <rect key="frame" x="37" y="19.5" width="22" height="13.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -319,50 +319,50 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설치 가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUZ-Cm-U1C">
-                                                    <rect key="frame" x="37" y="45.5" width="41.5" height="13.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="37" y="46" width="43" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                     <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지원금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69w-Ke-2B9">
-                                                    <rect key="frame" x="37" y="64" width="29" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="37" y="65" width="30.5" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                     <color key="textColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="실부담금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufQ-iG-nS4">
-                                                    <rect key="frame" x="37" y="83" width="39" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="37" y="84" width="40.5" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                     <color key="textColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="크기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xw-d4-4mG">
-                                                    <rect key="frame" x="37" y="102" width="20" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="37" y="103" width="20.5" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                     <color key="textColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG7-lf-Ld6">
-                                                    <rect key="frame" x="114.5" y="45.5" width="29" height="13.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="116" y="46" width="27" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kM-2v-GMg">
-                                                    <rect key="frame" x="115" y="64" width="29" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="116.5" y="65" width="27" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-s4-jp8">
-                                                    <rect key="frame" x="115" y="83" width="29" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="116.5" y="84" width="27" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGX-yZ-MNw">
-                                                    <rect key="frame" x="115" y="102" width="29" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="115.5" y="103" width="27" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

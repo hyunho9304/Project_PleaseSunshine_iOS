@@ -18,6 +18,9 @@
 		BEAE22A921A2BD5D002F1062 /* CompanyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22A821A2BD5D002F1062 /* CompanyInfoTableViewCell.swift */; };
 		BEAE22AE21A2D928002F1062 /* NanumSquareRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEAE22AC21A2D928002F1062 /* NanumSquareRegular.ttf */; };
 		BEAE22AF21A2D928002F1062 /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEAE22AD21A2D928002F1062 /* NanumSquareBold.ttf */; };
+		BEAE22B121A44058002F1062 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22B021A44058002F1062 /* CompanyList.swift */; };
+		BEAE22B321A44ABC002F1062 /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22B221A44ABC002F1062 /* APIservice.swift */; };
+		BEAE22B521A44AF3002F1062 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22B421A44AF3002F1062 /* Server.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		BEAE22A821A2BD5D002F1062 /* CompanyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoTableViewCell.swift; sourceTree = "<group>"; };
 		BEAE22AC21A2D928002F1062 /* NanumSquareRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRegular.ttf; sourceTree = "<group>"; };
 		BEAE22AD21A2D928002F1062 /* NanumSquareBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareBold.ttf; sourceTree = "<group>"; };
+		BEAE22B021A44058002F1062 /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
+		BEAE22B221A44ABC002F1062 /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
+		BEAE22B421A44AF3002F1062 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 		BE69C08221A29150009E9E9F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BEAE22B021A44058002F1062 /* CompanyList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +102,8 @@
 		BE69C08321A29160009E9E9F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BEAE22B221A44ABC002F1062 /* APIservice.swift */,
+				BEAE22B421A44AF3002F1062 /* Server.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -304,9 +313,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAE22A721A2B39E002F1062 /* ComapnyDetailInfoTableViewCell.swift in Sources */,
+				BEAE22B121A44058002F1062 /* CompanyList.swift in Sources */,
 				BE69C08821A29246009E9E9F /* CompanyListViewController.swift in Sources */,
 				BEAE22A921A2BD5D002F1062 /* CompanyInfoTableViewCell.swift in Sources */,
 				BEAE22A421A29724002F1062 /* CompanyListCollectionViewCell.swift in Sources */,
+				BEAE22B321A44ABC002F1062 /* APIservice.swift in Sources */,
+				BEAE22B521A44AF3002F1062 /* Server.swift in Sources */,
 				BE74CB7B21A28F7E00411E7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

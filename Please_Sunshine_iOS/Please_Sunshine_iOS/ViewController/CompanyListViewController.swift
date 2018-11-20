@@ -18,7 +18,9 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     @IBOutlet weak var bubbleUIView: UIView!
     
     @IBOutlet weak var companyListCollectionView: UICollectionView!
-    var companySelectedIndex:IndexPath?                     //  선택고려
+    var companyList : [ CompanyList ] = [ CompanyList ]()
+    var companySelectedIndex:IndexPath?
+    var selectComapnyIndex : Int?
 
     @IBOutlet weak var companyInfoTableView: UITableView!
     @IBOutlet weak var showCompanyNameLabel: UILabel!
@@ -32,6 +34,11 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         set()
         setDelegate()
         setTarget()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        companyListInit()
     }
     
     func set() {
@@ -71,6 +78,42 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         alarmBtn.addTarget(self, action: #selector(self.pressedAlarmBtn(_:)), for: UIControl.Event.touchUpInside)
     }
     
+    //  업체 리스트 서버 통신
+    func companyListInit() {
+        
+        // 수정
+        
+        let indexPathForFirstRow = IndexPath(row: 0, section: 0)
+        self.collectionView( self.companyListCollectionView, didSelectItemAt: indexPathForFirstRow )
+        
+//        Server.reqCompanyList { ( companyListData , rescode) in
+//
+//            if( rescode == 200 ) {
+//
+//                self.companyList = companyListData
+//                self.companyListCollectionView.reloadData()
+//
+//                let indexPathForFirstRow = IndexPath(row: 0, section: 0)
+//                self.collectionView( self.companyListCollectionView, didSelectItemAt: indexPathForFirstRow )
+//
+//            }else {
+//
+//                let alert = UIAlertController(title: "서버", message: "통신상태를 확인해주세요", preferredStyle: .alert )
+//                let ok = UIAlertAction(title: "확인", style: .default, handler: nil )
+//                alert.addAction( ok )
+//                self.present(alert , animated: true , completion: nil)
+//            }
+//        }
+    }
+    
+    //  선택한 업체 디테일 서버 통신
+    func companyDetailInit() {
+    
+        //  가져와서 두개의 테이블뷰 리로드 데이터
+        
+        
+    }
+    
     @objc func pressedAlarmBtn( _ sender: UIButton ) {
         
         if( alarmBtn.image(for: .normal) == #imageLiteral(resourceName: "alarmOn") ) {
@@ -98,6 +141,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     //  cell 의 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        //  수정
         return 3
     }
     
@@ -107,7 +151,11 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CompanyListCollectionViewCell", for: indexPath ) as! CompanyListCollectionViewCell
         
-        // 서버데이터 기본 설정
+        //  수정
+//        cell.companyInfoLabel1.text = self.companyList[ indexPath.row ].c_summaryInfo1
+//        cell.companyInfoLabel2.text = self.companyList[ indexPath.row ].c_summaryInfo2
+//        cell.companyInfoLabel3.text = self.companyList[ indexPath.row ].c_summaryInfo3
+//        cell.companyNameLabel.text = self.companyList[ indexPath.row ].c_name
         
         if( indexPath == companySelectedIndex ) {
             
@@ -117,6 +165,13 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             cell.companyInfoLabel3.alpha = 1
             cell.companyNameLabel.alpha = 1
             
+            //  수정
+            self.showCompanyNameLabel.text = "서버데이터0"
+//            self.selectComapnyIndex = self.companyList[ indexPath.row ].c_id
+//            self.showCompanyNameLabel.text = companyList[ indexPath.row ].c_name
+            
+            companyDetailInit()
+            
         } else {
             
             cell.companyInfoImageView.image = #imageLiteral(resourceName: "listCirlce")
@@ -125,8 +180,6 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             cell.companyInfoLabel3.alpha = 0.5
             cell.companyNameLabel.alpha = 0.5
         }
-        
-        
         
         return cell
     }
@@ -150,6 +203,11 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 0
+    }
+    
     
     
 //  Mark -> TableView delegate
@@ -165,6 +223,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         if( tableView == companyInfoTableView ) {
             return 4
         } else {
+            //  수정
             return 3
         }
     }
@@ -178,15 +237,17 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             
             if( indexPath.row == 0 ) {
                 cell.typeLabel.text = "모듈 제조사"
+                cell.typeInfoLabel.text = "서버데이터1"
             } else if( indexPath.row == 1 ) {
                 cell.typeLabel.text = "인버터 제조사"
+                cell.typeInfoLabel.text = "서버데이터2"
             } else if( indexPath.row == 2 ) {
                 cell.typeLabel.text = "전화번호"
+                cell.typeInfoLabel.text = "서버데이터3"
             } else {
                 cell.typeLabel.text = "홈페이지 주소"
+                cell.typeInfoLabel.text = "서버데이터4"
             }
-            
-            cell.typeInfoLabel.text = "서버데이터"
             
             return cell
             
@@ -196,11 +257,11 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             
     
             
-            cell.panelNameLabel.text = "서버데이터"
-            cell.installPriceLabel.text = "서버데이터"
-            cell.supportPriceLabel.text = "서버데이터"
-            cell.actualPriceLabel.text = "서버데이터"
-            cell.panelSizeLabel.text = "서버데이터"
+            cell.panelNameLabel.text = "서버데이터1"
+            cell.installPriceLabel.text = "서버데이터2"
+            cell.supportPriceLabel.text = "서버데이터3"
+            cell.actualPriceLabel.text = "서버데이터4"
+            cell.panelSizeLabel.text = "서버데이터5"
             
             return cell
         }
