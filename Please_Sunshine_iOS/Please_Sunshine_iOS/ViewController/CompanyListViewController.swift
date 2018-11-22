@@ -81,29 +81,24 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     //  업체 리스트 서버 통신
     func companyListInit() {
         
-        // 수정
-        
-        let indexPathForFirstRow = IndexPath(row: 0, section: 0)
-        self.collectionView( self.companyListCollectionView, didSelectItemAt: indexPathForFirstRow )
-        
-//        Server.reqCompanyList { ( companyListData , rescode) in
-//
-//            if( rescode == 200 ) {
-//
-//                self.companyList = companyListData
-//                self.companyListCollectionView.reloadData()
-//
-//                let indexPathForFirstRow = IndexPath(row: 0, section: 0)
-//                self.collectionView( self.companyListCollectionView, didSelectItemAt: indexPathForFirstRow )
-//
-//            }else {
-//
-//                let alert = UIAlertController(title: "서버", message: "통신상태를 확인해주세요", preferredStyle: .alert )
-//                let ok = UIAlertAction(title: "확인", style: .default, handler: nil )
-//                alert.addAction( ok )
-//                self.present(alert , animated: true , completion: nil)
-//            }
-//        }
+        Server.reqCompanyList { ( companyListData , rescode) in
+
+            if( rescode == 200 ) {
+
+                self.companyList = companyListData
+                self.companyListCollectionView.reloadData()
+
+                let indexPathForFirstRow = IndexPath(row: 0, section: 0)
+                self.collectionView( self.companyListCollectionView, didSelectItemAt: indexPathForFirstRow )
+
+            }else {
+
+                let alert = UIAlertController(title: "서버", message: "통신상태를 확인해주세요", preferredStyle: .alert )
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil )
+                alert.addAction( ok )
+                self.present(alert , animated: true , completion: nil)
+            }
+        }
     }
     
     //  선택한 업체 디테일 서버 통신
@@ -141,8 +136,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     //  cell 의 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        //  수정
-        return 3
+        return companyList.count
     }
     
     //  cell 의 내용
@@ -151,11 +145,10 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CompanyListCollectionViewCell", for: indexPath ) as! CompanyListCollectionViewCell
         
-        //  수정
-//        cell.companyInfoLabel1.text = self.companyList[ indexPath.row ].c_summaryInfo1
-//        cell.companyInfoLabel2.text = self.companyList[ indexPath.row ].c_summaryInfo2
-//        cell.companyInfoLabel3.text = self.companyList[ indexPath.row ].c_summaryInfo3
-//        cell.companyNameLabel.text = self.companyList[ indexPath.row ].c_name
+        cell.companyInfoLabel1.text = self.companyList[ indexPath.row ].c_summaryInfo1
+        cell.companyInfoLabel2.text = self.companyList[ indexPath.row ].c_summaryInfo2
+        cell.companyInfoLabel3.text = self.companyList[ indexPath.row ].c_summaryInfo3
+        cell.companyNameLabel.text = self.companyList[ indexPath.row ].c_name
         
         if( indexPath == companySelectedIndex ) {
             
@@ -165,11 +158,9 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             cell.companyInfoLabel3.alpha = 1
             cell.companyNameLabel.alpha = 1
             
-            //  수정
-            self.showCompanyNameLabel.text = "서버데이터0"
-//            self.selectComapnyIndex = self.companyList[ indexPath.row ].c_id
-//            self.showCompanyNameLabel.text = companyList[ indexPath.row ].c_name
-            
+            self.selectComapnyIndex = self.companyList[ indexPath.row ].c_id
+            self.showCompanyNameLabel.text = self.companyList[ indexPath.row ].c_name
+
             companyDetailInit()
             
         } else {

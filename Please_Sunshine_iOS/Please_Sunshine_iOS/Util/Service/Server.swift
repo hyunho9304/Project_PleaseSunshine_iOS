@@ -16,7 +16,7 @@ struct Server : APIService {
     //  업체 리스트
     static func reqCompanyList( completion : @escaping ( [ CompanyList ] , _ status : Int ) -> Void ) {
         
-        let URL = url( "/")
+        let URL = url( "/collection/company")
         
         Alamofire.request(URL, method: .get , parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData() { res in
             

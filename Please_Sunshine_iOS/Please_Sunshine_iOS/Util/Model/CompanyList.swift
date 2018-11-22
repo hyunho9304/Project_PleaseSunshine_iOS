@@ -15,12 +15,11 @@ struct CompanyList : Codable {
     let c_summaryInfo1 : String?
     let c_summaryInfo2 : String?
     let c_summaryInfo3 : String?
-    
 }
 
 struct CompanyListData : Codable {
     
     let status : String!
-    let data : [ CompanyList ]!
+    let data : [ CompanyList ]?
     let message : String!
 }
