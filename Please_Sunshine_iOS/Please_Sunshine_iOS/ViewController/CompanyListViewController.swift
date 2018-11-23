@@ -27,6 +27,8 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     
     @IBOutlet weak var companyDetailInfoTableView: UITableView!
     
+    var companyInfo : CompanyInfo?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,10 +105,22 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     
     //  선택한 업체 디테일 서버 통신
     func companyDetailInit() {
-    
-        //  가져와서 두개의 테이블뷰 리로드 데이터
         
-        
+        Server.reqCompanyDetail(c_id: self.selectComapnyIndex! ) { ( companyDetailData , rescode ) in
+            
+            if( rescode == 200 ) {
+                
+                self.companyInfo = companyDetailData
+                self.companyInfoTableView.reloadData()
+                self.companyDetailInfoTableView.reloadData()
+            } else {
+                
+                let alert = UIAlertController(title: "서버", message: "통신상태를 확인해주세요", preferredStyle: .alert )
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil )
+                alert.addAction( ok )
+                self.present(alert , animated: true , completion: nil)
+            }
+        }
     }
     
     @objc func pressedAlarmBtn( _ sender: UIButton ) {
@@ -128,8 +142,6 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             bubbleUIView.isHidden = false
         }
     }
-    
-    
     
 //  Mark -> CollectionView delegate
     
@@ -214,8 +226,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         if( tableView == companyInfoTableView ) {
             return 4
         } else {
-            //  수정
-            return 3
+            return companyInfo?.detail?.count ?? 0
         }
     }
     
@@ -225,34 +236,33 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         if( tableView == companyInfoTableView ) {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyInfoTableViewCell") as! CompanyInfoTableViewCell
-            
+
             if( indexPath.row == 0 ) {
                 cell.typeLabel.text = "모듈 제조사"
-                cell.typeInfoLabel.text = "서버데이터1"
+                cell.typeInfoLabel.text = self.companyInfo?.c_module
             } else if( indexPath.row == 1 ) {
                 cell.typeLabel.text = "인버터 제조사"
-                cell.typeInfoLabel.text = "서버데이터2"
+                cell.typeInfoLabel.text = self.companyInfo?.c_inverter
             } else if( indexPath.row == 2 ) {
                 cell.typeLabel.text = "전화번호"
-                cell.typeInfoLabel.text = "서버데이터3"
+                cell.typeInfoLabel.text = self.companyInfo?.c_phoneNum
             } else {
                 cell.typeLabel.text = "홈페이지 주소"
-                cell.typeInfoLabel.text = "서버데이터4"
+                cell.typeInfoLabel.text = self.companyInfo?.c_site
             }
-            
+        
             return cell
             
         } else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ComapnyDetailInfoTableViewCell") as! ComapnyDetailInfoTableViewCell
             
-    
+            cell.panelNameLabel.text = "\(gino(self.companyInfo?.detail![ indexPath.row ].pi_watt ))W \(gsno(self.companyInfo?.detail![ indexPath.row ].pi_type))"
             
-            cell.panelNameLabel.text = "서버데이터1"
-            cell.installPriceLabel.text = "서버데이터2"
-            cell.supportPriceLabel.text = "서버데이터3"
-            cell.actualPriceLabel.text = "서버데이터4"
-            cell.panelSizeLabel.text = "서버데이터5"
+            cell.installPriceLabel.text = self.companyInfo?.detail![ indexPath.row ].pi_installPrice
+            cell.supportPriceLabel.text = self.companyInfo?.detail![ indexPath.row ].pi_supportPrice
+            cell.actualPriceLabel.text = self.companyInfo?.detail![ indexPath.row ].pi_actualPrice
+            cell.panelSizeLabel.text = self.companyInfo?.detail![ indexPath.row ].pi_size
             
             return cell
         }

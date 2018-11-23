@@ -54,7 +54,7 @@ struct Server : APIService {
     }
     
     //  업체 디테일
-    static func reqCompanyDetail( c_id : Int , completion : @escaping ( [ CompanyDetail ] , _ status : Int ) -> Void ) {
+    static func reqCompanyDetail( c_id : Int , completion : @escaping ( CompanyInfo , _ status : Int ) -> Void ) {
         
         let URL = url( "/collection/panel?c_id=\(c_id)")
         
@@ -71,14 +71,12 @@ struct Server : APIService {
                     
                     do {
                         
-                        let companyDetailData = try decoder.decode(CompanyDetailData.self , from: value)
+                        let companyDetailData = try decoder.decode( CompanyDetailData.self , from: value)
                         
                         if( res.response?.statusCode == 200 ){
-                            
                             completion( companyDetailData.data! , 200 )
                         }
                         else{
-                            
                             completion( companyDetailData.data! , 500 )
                         }
                         

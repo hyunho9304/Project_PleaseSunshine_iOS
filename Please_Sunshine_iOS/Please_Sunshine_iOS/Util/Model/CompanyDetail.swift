@@ -10,10 +10,6 @@ import Foundation
 
 struct CompanyDetail : Codable {
     
-    let c_inverter : String?
-    let c_phoneNum : String?
-    let c_site : String?
-    
     let pi_id : Int?
     let pi_watt : Int?
     let pi_type : String?
@@ -23,9 +19,18 @@ struct CompanyDetail : Codable {
     let pi_size : String?
 }
 
+struct CompanyInfo : Codable {
+    
+    let c_module : String?
+    let c_inverter : String?
+    let c_phoneNum : String?
+    let c_site : String?
+    let detail : [ CompanyDetail ]?
+}
+
 struct CompanyDetailData : Codable {
     
     let status : String!
-    let data : [ CompanyDetail ]?
+    let data : CompanyInfo!
     let message : String!
 }

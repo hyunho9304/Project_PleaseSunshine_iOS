@@ -22,6 +22,7 @@
 		BEAE22B321A44ABC002F1062 /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22B221A44ABC002F1062 /* APIservice.swift */; };
 		BEAE22B521A44AF3002F1062 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22B421A44AF3002F1062 /* Server.swift */; };
 		BEAE22B721A7B29C002F1062 /* CompanyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22B621A7B29B002F1062 /* CompanyDetail.swift */; };
+		BEAE22B921A7EE6D002F1062 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAE22B821A7EE6D002F1062 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BEAE22B221A44ABC002F1062 /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
 		BEAE22B421A44AF3002F1062 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		BEAE22B621A7B29B002F1062 /* CompanyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetail.swift; sourceTree = "<group>"; };
+		BEAE22B821A7EE6D002F1062 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		BE69C08121A29143009E9E9F /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				BEAE22B821A7EE6D002F1062 /* Extension.swift */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				BE69C08821A29246009E9E9F /* CompanyListViewController.swift in Sources */,
 				BEAE22A921A2BD5D002F1062 /* CompanyInfoTableViewCell.swift in Sources */,
 				BEAE22A421A29724002F1062 /* CompanyListCollectionViewCell.swift in Sources */,
+				BEAE22B921A7EE6D002F1062 /* Extension.swift in Sources */,
 				BEAE22B321A44ABC002F1062 /* APIservice.swift in Sources */,
 				BEAE22B521A44AF3002F1062 /* Server.swift in Sources */,
 				BE74CB7B21A28F7E00411E7B /* AppDelegate.swift in Sources */,
