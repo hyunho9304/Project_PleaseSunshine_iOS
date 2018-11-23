@@ -10,7 +10,6 @@ import UIKit
 
 class CompanyListViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , UITableViewDelegate , UITableViewDataSource {
 
-    
     let userdefault = UserDefaults.standard
     
     @IBOutlet weak var alarmBtn: UIButton!
@@ -21,12 +20,15 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
     var companyList : [ CompanyList ] = [ CompanyList ]()
     var companySelectedIndex:IndexPath?
     var selectComapnyIndex : Int?
+    var selectCompanySite : String?
+    var selectCompanyPhoneNum : String?
 
     @IBOutlet weak var companyInfoTableView: UITableView!
     @IBOutlet weak var showCompanyNameLabel: UILabel!
+    @IBOutlet weak var siteBtn: UIButton!
+    @IBOutlet weak var callBtn: UIButton!
     
     @IBOutlet weak var companyDetailInfoTableView: UITableView!
-    
     var companyInfo : CompanyInfo?
     
     
@@ -78,6 +80,12 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         
         //  알림 끄기 버튼 클릭
         alarmBtn.addTarget(self, action: #selector(self.pressedAlarmBtn(_:)), for: UIControl.Event.touchUpInside)
+        
+        //  사이트 오픈 버튼 클릭
+        siteBtn.addTarget(self, action: #selector(self.pressedSiteBtn(_:)), for: UIControl.Event.touchUpInside)
+        
+        //  전호걸기 버튼 클릭
+        callBtn.addTarget(self, action: #selector(self.pressedCallBtn(_:)), for: UIControl.Event.touchUpInside)
     }
     
     //  업체 리스트 서버 통신
@@ -141,6 +149,16 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             alarmLabel.text = "300W 초과 발전기는 부산시에서 보조금이 지원되지 않습니다."
             bubbleUIView.isHidden = false
         }
+    }
+    
+    @objc func pressedSiteBtn( _ sender : UIButton ) {
+        
+        UIApplication.shared.open( URL(string: self.selectCompanySite! )! , options: [:], completionHandler: nil )
+    }
+    
+    @objc func pressedCallBtn( _ sender : UIButton ) {
+        
+        UIApplication.shared.open( URL(string: "tel://\(gsno(self.selectCompanyPhoneNum))" )! , options: [:], completionHandler: nil )
     }
     
 //  Mark -> CollectionView delegate
@@ -246,9 +264,11 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             } else if( indexPath.row == 2 ) {
                 cell.typeLabel.text = "전화번호"
                 cell.typeInfoLabel.text = self.companyInfo?.c_phoneNum
+                self.selectCompanyPhoneNum = self.companyInfo?.c_phoneNum
             } else {
                 cell.typeLabel.text = "홈페이지 주소"
                 cell.typeInfoLabel.text = self.companyInfo?.c_site
+                self.selectCompanySite = self.companyInfo?.c_site
             }
         
             return cell

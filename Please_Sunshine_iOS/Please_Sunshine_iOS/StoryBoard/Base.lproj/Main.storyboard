@@ -419,7 +419,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-6P-hBP">
-                                <rect key="frame" x="0.0" y="312" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="311" width="375" height="1"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ap8-6P-hBP" secondAttribute="height" multiplier="375:1" id="wgf-Oo-CZc"/>
@@ -478,7 +478,7 @@
                             <constraint firstItem="KYQ-X2-hua" firstAttribute="trailing" secondItem="DP2-JJ-kFL" secondAttribute="trailing" id="lw0-oi-CcJ"/>
                             <constraint firstItem="paC-vq-9ne" firstAttribute="top" secondItem="KYQ-X2-hua" secondAttribute="bottom" id="nOd-0W-qQj"/>
                             <constraint firstItem="phj-Hl-tp8" firstAttribute="top" secondItem="DP2-JJ-kFL" secondAttribute="top" constant="40" id="pBy-Pg-Ol3"/>
-                            <constraint firstItem="ap8-6P-hBP" firstAttribute="top" secondItem="KYQ-X2-hua" secondAttribute="bottom" id="qFa-6A-wIz"/>
+                            <constraint firstItem="ap8-6P-hBP" firstAttribute="top" secondItem="KYQ-X2-hua" secondAttribute="bottom" constant="-1" id="qFa-6A-wIz"/>
                             <constraint firstItem="Asp-JR-iWh" firstAttribute="top" secondItem="DP2-JJ-kFL" secondAttribute="top" id="yLg-Pi-FZj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DP2-JJ-kFL"/>
@@ -488,10 +488,12 @@
                         <outlet property="alarmBtn" destination="KnQ-r6-crp" id="8A5-m3-3fC"/>
                         <outlet property="alarmLabel" destination="zgT-rO-hAL" id="4kl-p0-wAa"/>
                         <outlet property="bubbleUIView" destination="phj-Hl-tp8" id="7Xh-aM-KW7"/>
+                        <outlet property="callBtn" destination="7hY-pG-Rab" id="nNs-BW-tF8"/>
                         <outlet property="companyDetailInfoTableView" destination="paC-vq-9ne" id="2Cn-Lq-59E"/>
                         <outlet property="companyInfoTableView" destination="dVT-la-gYO" id="KWJ-tR-JqX"/>
                         <outlet property="companyListCollectionView" destination="KYQ-X2-hua" id="Umc-VD-tzo"/>
                         <outlet property="showCompanyNameLabel" destination="7Ex-Md-NAt" id="k61-Go-1jW"/>
+                        <outlet property="siteBtn" destination="lkE-dU-mbU" id="K24-Af-KoT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H69-TL-6T1" userLabel="First Responder" sceneMemberID="firstResponder"/>
