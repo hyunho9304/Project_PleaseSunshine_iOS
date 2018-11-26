@@ -119,6 +119,13 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
             if( rescode == 200 ) {
                 
                 self.companyInfo = companyDetailData
+                
+                if( self.companyInfo?.c_site == "-" ) {
+                    self.siteBtn.isHidden = true
+                } else {
+                    self.siteBtn.isHidden = false
+                }
+                
                 self.companyInfoTableView.reloadData()
                 self.companyDetailInfoTableView.reloadData()
             } else {
