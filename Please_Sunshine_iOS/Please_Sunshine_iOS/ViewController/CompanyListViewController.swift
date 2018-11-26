@@ -288,7 +288,7 @@ class CompanyListViewController: UIViewController , UICollectionViewDelegate , U
         }
     }
     
-    //  cell 클릭했을시 다음 view 로 넘어가게 하는 코드 like push
+    //  선택하면 넘어감
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
