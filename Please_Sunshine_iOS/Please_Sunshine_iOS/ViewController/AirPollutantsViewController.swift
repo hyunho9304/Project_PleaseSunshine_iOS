@@ -11,6 +11,8 @@ import UIKit
 class AirPollutantsViewController: UIViewController {
 
     var busansox : Int?
+    @IBOutlet weak var busanSoxLabel: UILabel!
+    
     @IBOutlet weak var popUpUIView: UIView!
     @IBOutlet weak var percentBackUIView1: UIView!
     @IBOutlet weak var percentUIView1: UIView!
@@ -67,18 +69,7 @@ class AirPollutantsViewController: UIViewController {
         percentUIView1.layer.cornerRadius = ( percentUIView1.frame.height / 2 ) * self.view.frame.width / 375
         percentUIView1.layer.maskedCorners = [.layerMinXMaxYCorner , .layerMinXMinYCorner ]
         
-        percentUIView1.layer.borderWidth = 1
-        percentUIView1.layer.borderColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
-        percentUIView1.alpha = 0.47
-        
-        percentUIView2.layer.cornerRadius = ( percentUIView2.frame.height / 2 ) * self.view.frame.width / 375
-        percentUIView2.layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMaxXMinYCorner ]
-        
-        percentUIView2.layer.borderWidth = 1
-        percentUIView2.layer.borderColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
-        percentUIView2.alpha = 0.47
-        
-        
+        busanSoxLabel.text = "\(gino(busansox)) ppm"
     }
     
     func setTarget() {

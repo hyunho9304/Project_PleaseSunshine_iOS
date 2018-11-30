@@ -11,6 +11,7 @@
 		BE60B78221B149F7001F5900 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60B78121B149F7001F5900 /* FirstViewController.swift */; };
 		BE60B78621B14B3D001F5900 /* AirPollutantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60B78521B14B3D001F5900 /* AirPollutantsViewController.swift */; };
 		BE60B78821B14FFE001F5900 /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE60B78721B14FFE001F5900 /* NanumSquareOTFBold.otf */; };
+		BE60B78A21B16838001F5900 /* NanumOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE60B78921B16838001F5900 /* NanumOTFRegular.otf */; };
 		BE69C08821A29246009E9E9F /* CompanyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69C08721A29246009E9E9F /* CompanyListViewController.swift */; };
 		BE74CB7B21A28F7E00411E7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE74CB7A21A28F7E00411E7B /* AppDelegate.swift */; };
 		BE74CB8021A28F7E00411E7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE74CB7E21A28F7E00411E7B /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		BE60B78121B149F7001F5900 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		BE60B78521B14B3D001F5900 /* AirPollutantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPollutantsViewController.swift; sourceTree = "<group>"; };
 		BE60B78721B14FFE001F5900 /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
+		BE60B78921B16838001F5900 /* NanumOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumOTFRegular.otf; sourceTree = "<group>"; };
 		BE69C08721A29246009E9E9F /* CompanyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListViewController.swift; sourceTree = "<group>"; };
 		BE74CB7721A28F7E00411E7B /* Please_Sunshine_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Please_Sunshine_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE74CB7A21A28F7E00411E7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				BE60B78721B14FFE001F5900 /* NanumSquareOTFBold.otf */,
 				BEAE22AD21A2D928002F1062 /* NanumSquareBold.ttf */,
 				BEAE22AC21A2D928002F1062 /* NanumSquareRegular.ttf */,
+				BE60B78921B16838001F5900 /* NanumOTFRegular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAE22AF21A2D928002F1062 /* NanumSquareBold.ttf in Resources */,
+				BE60B78A21B16838001F5900 /* NanumOTFRegular.otf in Resources */,
 				BEAE22AE21A2D928002F1062 /* NanumSquareRegular.ttf in Resources */,
 				BE74CB8521A28F7F00411E7B /* LaunchScreen.storyboard in Resources */,
 				BE60B78821B14FFE001F5900 /* NanumSquareOTFBold.otf in Resources */,

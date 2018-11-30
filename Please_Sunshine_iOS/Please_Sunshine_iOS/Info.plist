@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>NanumOTFRegular</string>
 		<string>NanumSquareOTFBold</string>
 		<string>NanumSquareBold_ttf</string>
 		<string>NanumSquareRegular_ttf</string>
