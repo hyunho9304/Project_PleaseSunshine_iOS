@@ -45,6 +45,16 @@ class AirPollutantsViewController: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let touch : UITouch? = touches.first
+        
+        if touch?.view != popUpUIView {
+            
+            self.view.removeFromSuperview()
+        }
+    }
+    
     func set() {
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent( 0.6 )

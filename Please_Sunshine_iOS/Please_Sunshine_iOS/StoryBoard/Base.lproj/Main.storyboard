@@ -609,10 +609,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-0b-VNv">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-0b-VNv">
                                         <rect key="frame" x="17" y="155" width="139" height="26"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNz-QD-3Q6">
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNz-QD-3Q6">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.55343005364141518" blue="0.049402426958880086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -622,10 +622,10 @@
                                             <constraint firstAttribute="width" secondItem="WUA-0b-VNv" secondAttribute="height" multiplier="139:26" id="cOe-3i-Azc"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWr-NI-rMb">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWr-NI-rMb">
                                         <rect key="frame" x="160" y="155" width="139" height="26"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBf-D9-Yf9">
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBf-D9-Yf9">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.046772837529804212" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
