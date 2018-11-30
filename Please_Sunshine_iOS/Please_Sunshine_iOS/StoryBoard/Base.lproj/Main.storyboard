@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yk2-Zc-0nI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yaa-bH-OpB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,6 +12,9 @@
     <customFonts key="customFonts">
         <array key="NanumSquareBold.ttf">
             <string>NanumSquareB</string>
+        </array>
+        <array key="NanumSquareOTFBold.otf">
+            <string>NanumSquareOTFB</string>
         </array>
         <array key="NanumSquareRegular.ttf">
             <string>NanumSquareR</string>
@@ -192,7 +195,6 @@
                                                     <constraint firstAttribute="bottom" secondItem="Bv2-BR-oZq" secondAttribute="bottom" id="Bq0-Ls-AuH"/>
                                                     <constraint firstItem="lkE-dU-mbU" firstAttribute="centerY" secondItem="7hY-pG-Rab" secondAttribute="centerY" id="IsP-J5-Cmb"/>
                                                     <constraint firstItem="Bv2-BR-oZq" firstAttribute="leading" secondItem="c2h-l8-hSc" secondAttribute="leading" id="K9n-Mf-NpG"/>
-                                                    <constraint firstAttribute="trailing" secondItem="7hY-pG-Rab" secondAttribute="trailing" constant="10" id="Kg9-d4-SOh"/>
                                                     <constraint firstItem="lkE-dU-mbU" firstAttribute="width" secondItem="c2h-l8-hSc" secondAttribute="width" multiplier="44:375" id="OcR-Pb-xe4"/>
                                                     <constraint firstAttribute="trailing" secondItem="Bv2-BR-oZq" secondAttribute="trailing" id="R8B-qL-F7i"/>
                                                     <constraint firstItem="7hY-pG-Rab" firstAttribute="leading" secondItem="lkE-dU-mbU" secondAttribute="trailing" constant="6" id="YeA-Re-uAt"/>
@@ -447,7 +449,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="4Kz-X6-wth" firstAttribute="top" secondItem="phj-Hl-tp8" secondAttribute="top" constant="9" id="3jf-Gk-X8N"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Kz-X6-wth" secondAttribute="trailing" constant="19" id="D3O-5E-ubE"/>
                                     <constraint firstAttribute="trailing" secondItem="yX1-qB-Gtf" secondAttribute="trailing" id="V5V-MG-M7s"/>
                                     <constraint firstAttribute="bottom" secondItem="yX1-qB-Gtf" secondAttribute="bottom" id="VcE-24-wS4"/>
                                     <constraint firstItem="yX1-qB-Gtf" firstAttribute="top" secondItem="phj-Hl-tp8" secondAttribute="top" id="X9V-rw-kn1"/>
@@ -519,6 +520,124 @@
             </objects>
             <point key="canvasLocation" x="1884" y="127.28635682158921"/>
         </scene>
+        <!--First View Controller-->
+        <scene sceneID="FfD-Q8-KCh">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="Yaa-bH-OpB" customClass="FirstViewController" customModule="Please_Sunshine_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8P8-sH-2iU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw7-dD-pmh">
+                                <rect key="frame" x="91" y="180" width="160" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.44705882349999998" green="0.31372549020000001" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XNt-2L-GEd"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstBtn" destination="jw7-dD-pmh" id="U9d-sz-3xt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFd-bf-6qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2821.5999999999999" y="941.37931034482767"/>
+        </scene>
+        <!--Air Pollutants View Controller-->
+        <scene sceneID="jDa-es-QqR">
+            <objects>
+                <viewController storyboardIdentifier="AirPollutantsViewController" id="Zbj-A5-DGe" customClass="AirPollutantsViewController" customModule="Please_Sunshine_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rlj-vo-uA2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncy-8E-dgy">
+                                <rect key="frame" x="30" y="127" width="315" height="469"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-gC-lb6">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dg6-gC-lb6" secondAttribute="height" multiplier="1:1" id="wrM-J8-rpX"/>
+                                        </constraints>
+                                        <state key="normal" image="xButton"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부산시 발전소 대기오염물질 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUF-Pc-Qvb">
+                                        <rect key="frame" x="71" y="16" width="176" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="HUF-Pc-Qvb" secondAttribute="height" multiplier="176:15" id="Piu-oy-WU7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oI-sZ-Vmd">
+                                        <rect key="frame" x="0.0" y="44" width="315" height="1"/>
+                                        <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8oI-sZ-Vmd" secondAttribute="height" multiplier="315:1" id="LAl-vK-Ves"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miniCircle" translatesAutoresizingMaskIntoConstraints="NO" id="Ywc-LI-H2k">
+                                        <rect key="frame" x="16" y="68" width="6" height="6"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ywc-LI-H2k" secondAttribute="height" multiplier="1:1" id="qbp-yA-EPq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018.09 부산 발전소 배출농도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDg-4K-Db4">
+                                        <rect key="frame" x="32" y="63.5" width="168" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wDg-4K-Db4" secondAttribute="height" multiplier="56:5" id="9kh-zY-dlU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
+                                        <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8oI-sZ-Vmd" firstAttribute="top" secondItem="ncy-8E-dgy" secondAttribute="top" constant="44" id="3wr-Uo-ew1"/>
+                                    <constraint firstItem="8oI-sZ-Vmd" firstAttribute="centerX" secondItem="ncy-8E-dgy" secondAttribute="centerX" id="81s-v0-nht"/>
+                                    <constraint firstItem="dg6-gC-lb6" firstAttribute="width" secondItem="ncy-8E-dgy" secondAttribute="width" multiplier="44:315" id="ACm-Gt-Vz9"/>
+                                    <constraint firstAttribute="bottom" secondItem="8oI-sZ-Vmd" secondAttribute="bottom" constant="424" id="Cbo-ad-T7z"/>
+                                    <constraint firstItem="HUF-Pc-Qvb" firstAttribute="top" secondItem="ncy-8E-dgy" secondAttribute="top" constant="16" id="GVC-9V-Tdq"/>
+                                    <constraint firstItem="wDg-4K-Db4" firstAttribute="leading" secondItem="Ywc-LI-H2k" secondAttribute="trailing" constant="10" id="Jby-dL-zTD"/>
+                                    <constraint firstAttribute="width" secondItem="ncy-8E-dgy" secondAttribute="height" multiplier="45:67" id="Ju5-8b-XeT"/>
+                                    <constraint firstItem="wDg-4K-Db4" firstAttribute="width" secondItem="ncy-8E-dgy" secondAttribute="width" multiplier="168:315" id="Kas-W5-uFi"/>
+                                    <constraint firstItem="dg6-gC-lb6" firstAttribute="top" secondItem="ncy-8E-dgy" secondAttribute="top" id="LH6-9x-4jZ"/>
+                                    <constraint firstItem="wDg-4K-Db4" firstAttribute="centerY" secondItem="Ywc-LI-H2k" secondAttribute="centerY" id="MNA-Zm-j7X"/>
+                                    <constraint firstItem="dg6-gC-lb6" firstAttribute="leading" secondItem="ncy-8E-dgy" secondAttribute="leading" id="Q6n-bN-vZg"/>
+                                    <constraint firstItem="8oI-sZ-Vmd" firstAttribute="width" secondItem="ncy-8E-dgy" secondAttribute="width" multiplier="315:315" id="V34-Lc-bPv"/>
+                                    <constraint firstItem="HUF-Pc-Qvb" firstAttribute="width" secondItem="ncy-8E-dgy" secondAttribute="width" multiplier="176:315" id="e3J-2Z-ALr"/>
+                                    <constraint firstItem="Ywc-LI-H2k" firstAttribute="top" secondItem="8oI-sZ-Vmd" secondAttribute="bottom" constant="23" id="kvV-Va-gUx"/>
+                                    <constraint firstItem="HUF-Pc-Qvb" firstAttribute="leading" secondItem="dg6-gC-lb6" secondAttribute="trailing" constant="27" id="vdd-OH-x8M"/>
+                                    <constraint firstItem="Ywc-LI-H2k" firstAttribute="width" secondItem="ncy-8E-dgy" secondAttribute="width" multiplier="6:315" id="vjZ-d3-Bu6"/>
+                                    <constraint firstItem="Ywc-LI-H2k" firstAttribute="leading" secondItem="ncy-8E-dgy" secondAttribute="leading" constant="16" id="wtP-27-WmR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UrR-kz-MES" firstAttribute="bottom" secondItem="ncy-8E-dgy" secondAttribute="bottom" constant="71" id="SQE-l1-NYF"/>
+                            <constraint firstItem="ncy-8E-dgy" firstAttribute="centerX" secondItem="UrR-kz-MES" secondAttribute="centerX" id="hgI-Zu-f1S"/>
+                            <constraint firstItem="ncy-8E-dgy" firstAttribute="top" secondItem="UrR-kz-MES" secondAttribute="top" constant="107" id="nrj-WG-Flu"/>
+                            <constraint firstItem="ncy-8E-dgy" firstAttribute="width" secondItem="Rlj-vo-uA2" secondAttribute="width" multiplier="315:375" id="x0C-m1-GPd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UrR-kz-MES"/>
+                    </view>
+                    <connections>
+                        <outlet property="popUpUIView" destination="ncy-8E-dgy" id="Z9m-mH-SVc"/>
+                        <outlet property="xBtn" destination="dg6-gC-lb6" id="hsD-04-jak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysh-BP-WhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3829.5999999999999" y="940.47976011994012"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MqI-uf-DcI">
             <objects>
@@ -543,6 +662,8 @@
         <image name="bubble" width="123" height="20"/>
         <image name="callButton" width="44" height="44"/>
         <image name="listCirlce" width="140" height="140"/>
+        <image name="miniCircle" width="6" height="6"/>
         <image name="webSiteButton" width="44" height="44"/>
+        <image name="xButton" width="44" height="44"/>
     </resources>
 </document>
