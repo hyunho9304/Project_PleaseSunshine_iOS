@@ -12,6 +12,10 @@ class AirPollutantsViewController: UIViewController {
 
     var busansox : Int?
     @IBOutlet weak var popUpUIView: UIView!
+    @IBOutlet weak var percentBackUIView1: UIView!
+    @IBOutlet weak var percentUIView1: UIView!
+    @IBOutlet weak var percentBackUIView2: UIView!
+    @IBOutlet weak var percentUIView2: UIView!
     
     
     @IBOutlet weak var xBtn: UIButton!
@@ -25,12 +29,56 @@ class AirPollutantsViewController: UIViewController {
         showAnimate()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if( self.busansox! <= 30 ) {
+            percentUIView1.frame.size.width = CGFloat( ( Double( self.busansox! ) * Double( self.percentBackUIView1.frame.size.width ) ) / 30 )
+        } else {
+            
+            let tmpSox = self.busansox! - 30
+            
+            percentUIView1.frame.size.width = self.percentBackUIView1.frame.size.width
+            percentUIView2.frame.size.width = CGFloat( ( Double( tmpSox ) * Double( self.percentBackUIView2.frame.size.width ) ) / 30 )
+            
+        }
+    }
+    
     func set() {
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent( 0.6 )
         
         popUpUIView.layer.cornerRadius = 10 * self.view.frame.width / 375
         popUpUIView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner , .layerMinXMinYCorner , .layerMaxXMinYCorner ]
+        
+        percentBackUIView1.layer.cornerRadius = ( percentBackUIView1.frame.height / 2 ) * self.view.frame.width / 375
+        percentBackUIView1.layer.maskedCorners = [.layerMinXMaxYCorner , .layerMinXMinYCorner ]
+        
+        percentBackUIView1.layer.borderWidth = 1
+        percentBackUIView1.layer.borderColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        percentBackUIView1.alpha = 0.47
+        
+        percentBackUIView2.layer.cornerRadius = ( percentBackUIView2.frame.height / 2 ) * self.view.frame.width / 375
+        percentBackUIView2.layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMaxXMinYCorner ]
+        
+        percentBackUIView2.layer.borderWidth = 1
+        percentBackUIView2.layer.borderColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        percentBackUIView2.alpha = 0.47
+
+        percentUIView1.layer.cornerRadius = ( percentUIView1.frame.height / 2 ) * self.view.frame.width / 375
+        percentUIView1.layer.maskedCorners = [.layerMinXMaxYCorner , .layerMinXMinYCorner ]
+        
+        percentUIView1.layer.borderWidth = 1
+        percentUIView1.layer.borderColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        percentUIView1.alpha = 0.47
+        
+        percentUIView2.layer.cornerRadius = ( percentUIView2.frame.height / 2 ) * self.view.frame.width / 375
+        percentUIView2.layer.maskedCorners = [.layerMaxXMaxYCorner , .layerMaxXMinYCorner ]
+        
+        percentUIView2.layer.borderWidth = 1
+        percentUIView2.layer.borderColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
+        percentUIView2.alpha = 0.47
+        
+        
     }
     
     func setTarget() {

@@ -29,7 +29,7 @@ class FirstViewController: UIViewController {
         
         guard let airPollutantsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AirPollutantsViewController") as? AirPollutantsViewController else { return }
         
-        airPollutantsVC.busansox = 100
+        airPollutantsVC.busansox = 40
         
         self.addChild( airPollutantsVC )
         airPollutantsVC.view.frame = self.view.frame
